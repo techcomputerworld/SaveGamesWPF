@@ -3,10 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:SaveGamesWPF.ViewModels"
         xmlns:local="clr-namespace:SaveGamesWPF"
         mc:Ignorable="d"
         Title="Save Games Windows" Height="450" Width="800">
-    <Grid>
+    <Window.Resources>
+        <vm:SaveGamesViewModel    x:Key="SaveGamesVM"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource SaveGamesVM}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="343*"/>
             <ColumnDefinition Width="95*"/>
@@ -48,7 +52,7 @@
 
         </Menu>
         <Label Content="Games" Grid.Row="1" HorizontalAlignment="Left" Width="100" Margin="103,0,0,0" RenderTransformOrigin="0.5,0.5" FontSize="22"/>
-        <ListBox  Grid.Row="2" HorizontalAlignment="Left" Width="340"/>
+        <ListBox ItemsSource="{Binding ListaGames}" Grid.Row="2" HorizontalAlignment="Left" Width="340"/>
         <Button Content="Delete " Margin="10,73,0,106" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="73" RenderTransformOrigin="0.5,0.5"/>
         <Button Content="Update " Margin="10,132,0,47" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="73" RenderTransformOrigin="0.5,0.5"/>
         <Button Content="Add game" Margin="10,10,0,168" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="73"/>

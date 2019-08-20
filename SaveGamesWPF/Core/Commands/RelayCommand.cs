@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace MVVMProject.Core.Commands
+namespace SaveGamesWPF.Core.Commands
 {
     public class RelayCommand : ICommand
     {

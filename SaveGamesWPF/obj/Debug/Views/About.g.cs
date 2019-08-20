@@ -9,6 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using SaveGamesWPF;
 using SaveGamesWPF.Views;
 using System;
 using System.Diagnostics;

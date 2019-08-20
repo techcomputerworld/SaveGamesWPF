@@ -20,6 +20,8 @@ namespace SaveGamesWPF.DbConector
         public string SaveGames { get; set; }
         public string SaveGamesGame { get; set; }
         public string Image { get; set; }
+        public string Descripcion { get; set; }
+        public string DateSaveGame { get; set; }
 
     }
 }

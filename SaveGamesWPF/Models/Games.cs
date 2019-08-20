@@ -17,20 +17,21 @@ namespace SaveGamesWPF.Models
             get { return id; }
             set { id = value; }
         }
+
         private string name;
         public string Name
         {
             get { return name; }
             set { name = value; }
         }
-        //ubicación donde se guardan los juegos en la carpeta del usuario donde vas a guardar el juego
+        //ubicación donde se guardan los juegos en la carpeta del usuario donde vas a guardar el juego.
         private string saveGames;
         public string SaveGames
         {
             get { return saveGames; }
             set { saveGames = value; }
         }
-        //Ubicación donde se guarda el juego en la carpeta del juego 
+        //Ubicación por defecto donde guarda partidas el juego, y podemos cambiarla pero por la que use el juego.
         private string saveGamesGame;
         public string SaveGamesGame
         {
@@ -45,6 +46,14 @@ namespace SaveGamesWPF.Models
             get { return image; }
             set { image = value; }
         }
+
+        private string descripcion;
+        public string Descripcion
+        {
+            get { return descripcion; }
+            set { descripcion = value; }
+        }
+
         public Games (int id, string name)
         {
             Id = id;
